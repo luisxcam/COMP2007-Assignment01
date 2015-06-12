@@ -1,3 +1,8 @@
 ﻿body {
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
 
+#calculator-title {
+    font-size: 2em;
 }

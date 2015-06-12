@@ -23,59 +23,43 @@
 <body>
     <div class="container">
         <form id="form1" runat="server">
-
-            <!--Header-->
-            <nav class="navbar navbar-default navbar-fixed-top">
-                <div class="container-fluid">
-                    <div class="row">
-
-                        <div class="col-xs-4 col-sm-2 col-md-1 col-lg-1">
-                            <div class="navbar-brand">
-                                <img class="visible-lg" alt="comapny-logo" src="../files/img/logo3.gif" />
-                                <img class="hidden-lg" alt="comapny-logo" src="../files/img/logo2.gif" />
-                            </div>
-                            <!--#navbar-brand-->
-                        </div>
-                        <!--#col-xs-4-->
-
-                        <div class="col-xs-8 col-sm-10 col-md-11 col-lg-11">
-                            <div class="navbar-text">
-                                <h2>Game Calculator</h2>
-                            </div>
-                            <!--#navbar-text-->
+            <div id="PageWrapper">
+                <!--Header-->
+                <nav class="navbar navbar-default navbar-fixed-top">
+                    <div class="navbar-brand">
+                        <a href="/">COMP2007-Assignment01</a>
                     </div>
-                    <!--#col-xs-8-->
-                    </div><!--#row-->
+                    <!--.navbar-brand-->
+                    <!--#container-fluid -->
+                </nav>
+                <!--.navbar navbar-default navbar-fixed-top-->
 
+                <!--Content-->
+                <div class="container-fluid body-content">
+                    <section id="mainContent">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                    </section>
+                    <!--#mainContent-->
+                </div><!--.container body-content-->
 
-                </div>
-                <!--#container-fluid-->
-            </nav>
-            <!--#navbar navbar-default navbar-fixed-top-->
-
-            <section id="mainContent">
-                <div>
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                    </asp:ContentPlaceHolder>
-                </div>
-            </section>
-            <!--.mainContent-->
-
-            <footer class="nav navbar-fixed-bottom navbar-default">
-                <div class="container-fluid">
-                    <h4 class="navbar-text">© Copyright 2015</h4>
-                </div>
-            </footer>
-
+                <!--Footer-->
+                <footer class="nav navbar-fixed-bottom navbar-default">
+                    <div class="container-fluid">
+                        <h4 class="navbar-text">© Copyright 2015</h4>
+                    </div>
+                </footer><!--.nav navbar-fixed-bottom navbar-default-->
+            </div>
+            <!--#PageWrapper-->
         </form>
-        <!--.Form1-->
+        <!--#Form1-->
     </div>
-    <!--#container-->
+    <!--.container-->
 
 
     <!--Javascript-->
     <script src="../Scripts/jquery-1.9.1.min.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="../Scripts/main.js"></script>
 
 </body>
 </html>
