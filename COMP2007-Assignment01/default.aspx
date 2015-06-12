@@ -24,7 +24,7 @@
                         </div>
                         <div>
                             <asp:Label ID="PointsScored01Label" runat="server" Text="Points Scored:"></asp:Label>
-                            <asp:TextBox ID="PointsScored01TextBox" runat="server" placeholder="Score of your team" CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="PointsScored01TextBox" runat="server" placeholder="Score of your team" CssClass="form-control" ClientIDMode="Static"></asp:TextBox>
                         </div>
                         <div>
                             <asp:Label ID="PointsAllowed01Label" runat="server" Text="Points Allowed:"></asp:Label>
