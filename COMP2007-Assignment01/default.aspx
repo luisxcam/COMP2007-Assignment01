@@ -10,6 +10,7 @@
         </div>
         <div class="panel-body">
             <div class="row">
+                <!--GAME 01 - GAME 01 - GAME 01 - GAME 01 - GAME 01 - GAME 01 - GAME 01 - -->
                 <div class="col-md-6 col-lg-6">
                     <div class="input-group">
                         <div>
@@ -18,13 +19,13 @@
                         <div>
                             <asp:Label ID="Result01Label" runat="server" Text="Results:"></asp:Label>
                             <asp:RadioButtonList ID="WinLose01RadioButtonList" runat="server">
-                                <asp:ListItem Text="Win"></asp:ListItem>
+                                <asp:ListItem Selected="True" Text="Win"></asp:ListItem>
                                 <asp:ListItem Text="Lose"></asp:ListItem>
                             </asp:RadioButtonList>
                         </div>
                         <div>
                             <asp:Label ID="PointsScored01Label" runat="server" Text="Points Scored:"></asp:Label>
-                            <asp:TextBox ID="PointsScored01TextBox" runat="server" placeholder="Score of your team" CssClass="form-control" ClientIDMode="Static"></asp:TextBox>
+                            <asp:TextBox ID="PointsScored01TextBox" runat="server" placeholder="Score of your team" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div>
                             <asp:Label ID="PointsAllowed01Label" runat="server" Text="Points Allowed:"></asp:Label>
@@ -36,6 +37,7 @@
                         </div>
                     </div>
                 </div>
+                <!--GAME 02 - GAME 02 - GAME 02 - GAME 02 - GAME 02 - GAME 02 - GAME 02 - -->
                 <div class="col-md-6 col-lg-6">
                     <div class="input-group">
                         <div>
@@ -44,7 +46,7 @@
                         <div>
                             <asp:Label ID="Result02Label" runat="server" Text="Results:"></asp:Label>
                             <asp:RadioButtonList ID="WinLose02RadioButtonList" runat="server">
-                                <asp:ListItem Text="Win"></asp:ListItem>
+                                <asp:ListItem Selected="True" Text="Win"></asp:ListItem>
                                 <asp:ListItem Text="Lose"></asp:ListItem>
                             </asp:RadioButtonList>
                         </div>
@@ -64,6 +66,7 @@
                 </div>
             </div>
             <div class="row">
+                <!--GAME 03 - GAME 03 - GAME 03 - GAME 03 - GAME 03 - GAME 03 - GAME 03 - -->
                 <div class="col-md-6 col-lg-6">
                     <div class="input-group">
                         <div>
@@ -72,7 +75,7 @@
                         <div>
                             <asp:Label ID="Result03Label" runat="server" Text="Results:"></asp:Label>
                             <asp:RadioButtonList ID="WinLose03RadioButtonList" runat="server">
-                                <asp:ListItem Text="Win"></asp:ListItem>
+                                <asp:ListItem Selected="True" Text="Win"></asp:ListItem>
                                 <asp:ListItem Text="Lose"></asp:ListItem>
                             </asp:RadioButtonList>
                         </div>
@@ -90,6 +93,7 @@
                         </div>
                     </div>
                 </div>
+                <!--GAME 04 - GAME 04 - GAME 04 - GAME 04 - GAME 04 - GAME 04 - GAME 04 - -->
                 <div class="col-md-6 col-lg-6">
                     <div class="input-group">
                         <div>
@@ -98,7 +102,7 @@
                         <div>
                             <asp:Label ID="Result04Label" runat="server" Text="Results:"></asp:Label>
                             <asp:RadioButtonList ID="WinLose04RadioButtonList" runat="server">
-                                <asp:ListItem Text="Win"></asp:ListItem>
+                                <asp:ListItem Selected="True" Text="Win"></asp:ListItem>
                                 <asp:ListItem Text="Lose"></asp:ListItem>
                             </asp:RadioButtonList>
                         </div>
@@ -123,7 +127,60 @@
     </div>
     <!--.panel panel-primary-->
     <div>
-        <asp:Button ID="SubmitButton" runat="server" Text="Submit" CssClass="btn btn-primary" />
+        <asp:Button ID="SubmitButton" runat="server" Text="Submit" CssClass="btn btn-primary" OnClick="SubmitButton_Click" />
     </div>
-    
+
+    <br />
+
+    <!--Display results of the form-->
+    <div id="showResults" runat="server" class="">
+        <div id="resultStatus" class="panel panel-success" runat="server">
+            <!-- Default panel contents -->
+            <h3 class="panel-heading">Results</h3>
+            
+            <!--Error display -->
+            <asp:Label ID="errorList" runat="server" Text="" CssClass="hidden"></asp:Label>
+
+            <!-- Table -->
+            <asp:Table ID="Table1" runat="server" CssClass="table">
+                <asp:TableHeaderRow>
+                    <asp:TableHeaderCell>Games Won</asp:TableHeaderCell>
+                    <asp:TableCell ID="gamesWon">4</asp:TableCell>
+                </asp:TableHeaderRow>
+                <asp:TableHeaderRow>
+                    <asp:TableHeaderCell>Games Lost</asp:TableHeaderCell>
+                    <asp:TableCell ID="gamesLost">0</asp:TableCell>
+                </asp:TableHeaderRow>
+                <asp:TableHeaderRow>
+                    <asp:TableHeaderCell>Winning %</asp:TableHeaderCell>
+                    <asp:TableCell ID="winningPercentage">71%</asp:TableCell>
+                </asp:TableHeaderRow>
+                <asp:TableHeaderRow>
+                    <asp:TableHeaderCell>Total Points Scored</asp:TableHeaderCell>
+                    <asp:TableCell ID="totalPointsScored">124</asp:TableCell>
+                </asp:TableHeaderRow>
+                <asp:TableHeaderRow>
+                    <asp:TableHeaderCell>Total Points Allowed</asp:TableHeaderCell>
+                    <asp:TableCell ID="totalPointsAllowed">300</asp:TableCell>
+                </asp:TableHeaderRow>
+                <asp:TableHeaderRow>
+                    <asp:TableHeaderCell>Point Differential</asp:TableHeaderCell>
+                    <asp:TableCell ID="pointDifferential">24</asp:TableCell>
+                </asp:TableHeaderRow>
+                <asp:TableHeaderRow>
+                    <asp:TableHeaderCell>Total Spectators</asp:TableHeaderCell>
+                    <asp:TableCell ID="totalSpectators">1200</asp:TableCell>
+                </asp:TableHeaderRow>
+                <asp:TableHeaderRow>
+                    <asp:TableHeaderCell>Average Spectators</asp:TableHeaderCell>
+                    <asp:TableCell ID="averageSpectators">120</asp:TableCell>
+                </asp:TableHeaderRow>
+            </asp:Table>
+
+        </div>
+
+        <!--Button to go back-->
+        <asp:Button ID="BackButton" runat="server" Text="Back" CssClass="btn btn-success" />
+    </div>
+
 </asp:Content>
