@@ -40,6 +40,15 @@ namespace COMP2007_Assignment01 {
         protected global::System.Web.UI.WebControls.RadioButtonList WinLose01RadioButtonList;
         
         /// <summary>
+        /// RequiredFieldValidatorWinLose01 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorWinLose01;
+        
+        /// <summary>
         /// PointsScored01Label control.
         /// </summary>
         /// <remarks>
@@ -56,6 +65,15 @@ namespace COMP2007_Assignment01 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox PointsScored01TextBox;
+        
+        /// <summary>
+        /// RequiredFieldValidatorPointsScored01 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorPointsScored01;
         
         /// <summary>
         /// PointsAllowed01Label control.
@@ -76,6 +94,24 @@ namespace COMP2007_Assignment01 {
         protected global::System.Web.UI.WebControls.TextBox PointsAllowed01TextBox;
         
         /// <summary>
+        /// RequiredFieldValidatorPointsAllowed01 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorPointsAllowed01;
+        
+        /// <summary>
+        /// CompareValidatorGame01 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidatorGame01;
+        
+        /// <summary>
         /// Spectators01Label control.
         /// </summary>
         /// <remarks>
@@ -92,6 +128,15 @@ namespace COMP2007_Assignment01 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Spectators01TextBox;
+        
+        /// <summary>
+        /// RequiredFieldValidatorSpectators01 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorSpectators01;
         
         /// <summary>
         /// Result02Label control.
@@ -112,6 +157,15 @@ namespace COMP2007_Assignment01 {
         protected global::System.Web.UI.WebControls.RadioButtonList WinLose02RadioButtonList;
         
         /// <summary>
+        /// RequiredFieldValidatorWinLose02 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorWinLose02;
+        
+        /// <summary>
         /// PointsScored02Label control.
         /// </summary>
         /// <remarks>
@@ -128,6 +182,15 @@ namespace COMP2007_Assignment01 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox PointsScored02TextBox;
+        
+        /// <summary>
+        /// RequiredFieldValidatorPointsScored02 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorPointsScored02;
         
         /// <summary>
         /// PointsAllowed02Label control.
@@ -148,6 +211,15 @@ namespace COMP2007_Assignment01 {
         protected global::System.Web.UI.WebControls.TextBox PointsAllowed02TextBox;
         
         /// <summary>
+        /// RequiredFieldValidatorPointsAllowed02 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorPointsAllowed02;
+        
+        /// <summary>
         /// Spectators02Label control.
         /// </summary>
         /// <remarks>
@@ -164,6 +236,15 @@ namespace COMP2007_Assignment01 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Spectators02TextBox;
+        
+        /// <summary>
+        /// RequiredFieldValidatorSpectators02 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorSpectators02;
         
         /// <summary>
         /// Result03Label control.
@@ -184,6 +265,15 @@ namespace COMP2007_Assignment01 {
         protected global::System.Web.UI.WebControls.RadioButtonList WinLose03RadioButtonList;
         
         /// <summary>
+        /// RequiredFieldValidatorWinLose03 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorWinLose03;
+        
+        /// <summary>
         /// PointsScored03Label control.
         /// </summary>
         /// <remarks>
@@ -200,6 +290,15 @@ namespace COMP2007_Assignment01 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox PointsScored03TextBox;
+        
+        /// <summary>
+        /// RequiredFieldValidatorPointsScored03 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorPointsScored03;
         
         /// <summary>
         /// PointsAllowed03Label control.
@@ -220,6 +319,15 @@ namespace COMP2007_Assignment01 {
         protected global::System.Web.UI.WebControls.TextBox PointsAllowed03TextBox;
         
         /// <summary>
+        /// RequiredFieldValidatorPointsAllowed03 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorPointsAllowed03;
+        
+        /// <summary>
         /// Spectators03Label control.
         /// </summary>
         /// <remarks>
@@ -236,6 +344,15 @@ namespace COMP2007_Assignment01 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Spectators03TextBox;
+        
+        /// <summary>
+        /// RequiredFieldValidatorSpectators03 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorSpectators03;
         
         /// <summary>
         /// Result04Label control.
@@ -256,6 +373,15 @@ namespace COMP2007_Assignment01 {
         protected global::System.Web.UI.WebControls.RadioButtonList WinLose04RadioButtonList;
         
         /// <summary>
+        /// RequiredFieldValidatorWinLose04 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorWinLose04;
+        
+        /// <summary>
         /// PointsScored04Label control.
         /// </summary>
         /// <remarks>
@@ -272,6 +398,15 @@ namespace COMP2007_Assignment01 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox PointsScored04TextBox;
+        
+        /// <summary>
+        /// RequiredFieldValidatorPointsScored04 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorPointsScored04;
         
         /// <summary>
         /// PointsAllowed04Label control.
@@ -292,6 +427,15 @@ namespace COMP2007_Assignment01 {
         protected global::System.Web.UI.WebControls.TextBox PointsAllowed04TextBox;
         
         /// <summary>
+        /// RequiredFieldValidatorPointsAllowed04 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorPointsAllowed04;
+        
+        /// <summary>
         /// Spectators04Label control.
         /// </summary>
         /// <remarks>
@@ -308,6 +452,15 @@ namespace COMP2007_Assignment01 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Spectators04TextBox;
+        
+        /// <summary>
+        /// RequiredFieldValidatorSpectators04 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorSpectators04;
         
         /// <summary>
         /// SubmitButton control.

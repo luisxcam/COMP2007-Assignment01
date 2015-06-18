@@ -26,19 +26,26 @@
                                 <asp:ListItem Text="Win"></asp:ListItem>
                                 <asp:ListItem Text="Lose"></asp:ListItem>
                             </asp:RadioButtonList>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidatorWinLose01" runat="server" ControlToValidate="WinLose01RadioButtonList" ErrorMessage="Must select one of the choices" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div>
                             <asp:Label ID="PointsScored01Label" runat="server" Text="Points Scored:"></asp:Label>
                             <asp:TextBox ID="PointsScored01TextBox" runat="server" placeholder="Score of your team" CssClass="form-control"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidatorPointsScored01" runat="server" ControlToValidate="PointsScored01TextBox" ErrorMessage="Scored Points field is empty. Please input the score" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div>
                             <asp:Label ID="PointsAllowed01Label" runat="server" Text="Points Allowed:"></asp:Label>
                             <asp:TextBox ID="PointsAllowed01TextBox" runat="server" placeholder="Score of the enemy team" CssClass="form-control"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidatorPointsAllowed01" runat="server" ControlToValidate="PointsAllowed01TextBox" ErrorMessage="Allowed Points field is empty. Please input the score" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <!--Equals validator-->
+                            <asp:CompareValidator ID="CompareValidatorGame01" runat="server" ErrorMessage="Points scored and points allowed cannot be equal." ControlToCompare="PointsScored01TextBox" ControlToValidate="PointsAllowed01TextBox" Operator="NotEqual"></asp:CompareValidator>
                         </div>
                         <div>
                             <asp:Label ID="Spectators01Label" runat="server" Text="Spectators:"></asp:Label>
                             <asp:TextBox ID="Spectators01TextBox" runat="server" placeholder="Amount of people in the facilities" CssClass="form-control"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidatorSpectators01" runat="server" ControlToValidate="Spectators01TextBox" ErrorMessage="Spectators field is empty. Please input the amount of spectators" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
+                        
                     </div>
                 </div>
                 <!--GAME 02 - GAME 02 - GAME 02 - GAME 02 - GAME 02 - GAME 02 - GAME 02 - -->
@@ -53,18 +60,22 @@
                                 <asp:ListItem Text="Win"></asp:ListItem>
                                 <asp:ListItem Text="Lose"></asp:ListItem>
                             </asp:RadioButtonList>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidatorWinLose02" runat="server" ControlToValidate="WinLose02RadioButtonList" ErrorMessage="Must select one of the choices" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div>
                             <asp:Label ID="PointsScored02Label" runat="server" Text="Points Scored:"></asp:Label>
                             <asp:TextBox ID="PointsScored02TextBox" runat="server" placeholder="Score of your team" CssClass="form-control"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidatorPointsScored02" runat="server" ControlToValidate="PointsScored02TextBox" ErrorMessage="Scored Points field is empty. Please input the score" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div>
                             <asp:Label ID="PointsAllowed02Label" runat="server" Text="Points Allowed:"></asp:Label>
                             <asp:TextBox ID="PointsAllowed02TextBox" runat="server" placeholder="Score of the enemy team" CssClass="form-control"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidatorPointsAllowed02" runat="server" ControlToValidate="PointsAllowed02TextBox" ErrorMessage="Allowed Points field is empty. Please input the score" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div>
                             <asp:Label ID="Spectators02Label" runat="server" Text="Spectators:"></asp:Label>
                             <asp:TextBox ID="Spectators02TextBox" runat="server" placeholder="Amount of people in the facilities" CssClass="form-control"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidatorSpectators02" runat="server" ControlToValidate="Spectators02TextBox" ErrorMessage="Spectators field is empty. Please input the amount of spectators" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                     </div>
                 </div>
@@ -82,18 +93,22 @@
                                 <asp:ListItem Text="Win"></asp:ListItem>
                                 <asp:ListItem Text="Lose"></asp:ListItem>
                             </asp:RadioButtonList>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidatorWinLose03" runat="server" ControlToValidate="WinLose03RadioButtonList" ErrorMessage="Must select one of the choices" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div>
                             <asp:Label ID="PointsScored03Label" runat="server" Text="Points Scored:"></asp:Label>
                             <asp:TextBox ID="PointsScored03TextBox" runat="server" placeholder="Score of your team" CssClass="form-control"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidatorPointsScored03" runat="server" ControlToValidate="PointsScored03TextBox" ErrorMessage="Scored Points field is empty. Please input the score" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div>
                             <asp:Label ID="PointsAllowed03Label" runat="server" Text="Points Allowed:"></asp:Label>
                             <asp:TextBox ID="PointsAllowed03TextBox" runat="server" placeholder="Score of the enemy team" CssClass="form-control"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidatorPointsAllowed03" runat="server" ControlToValidate="PointsAllowed03TextBox" ErrorMessage="Allowed Points field is empty. Please input the score" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div>
                             <asp:Label ID="Spectators03Label" runat="server" Text="Spectators:"></asp:Label>
                             <asp:TextBox ID="Spectators03TextBox" runat="server" placeholder="Amount of people in the facilities" CssClass="form-control"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidatorSpectators03" runat="server" ControlToValidate="Spectators03TextBox" ErrorMessage="Spectators field is empty. Please input the amount of spectators" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                     </div>
                 </div>
@@ -109,18 +124,22 @@
                                 <asp:ListItem Text="Win"></asp:ListItem>
                                 <asp:ListItem Text="Lose"></asp:ListItem>
                             </asp:RadioButtonList>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidatorWinLose04" runat="server" ControlToValidate="WinLose04RadioButtonList" ErrorMessage="Must select one of the choices" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div>
                             <asp:Label ID="PointsScored04Label" runat="server" Text="Points Scored:"></asp:Label>
                             <asp:TextBox ID="PointsScored04TextBox" runat="server" placeholder="Score of your team" CssClass="form-control"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidatorPointsScored04" runat="server" ControlToValidate="PointsScored04TextBox" ErrorMessage="Scored Points field is empty. Please input the score" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div>
                             <asp:Label ID="PointsAllowed04Label" runat="server" Text="Points Allowed:"></asp:Label>
                             <asp:TextBox ID="PointsAllowed04TextBox" runat="server" placeholder="Score of the enemy team" CssClass="form-control"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidatorPointsAllowed04" runat="server" ControlToValidate="PointsAllowed04TextBox" ErrorMessage="Allowed Points field is empty. Please input the score" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div>
                             <asp:Label ID="Spectators04Label" runat="server" Text="Spectators:"></asp:Label>
                             <asp:TextBox ID="Spectators04TextBox" runat="server" placeholder="Amount of people in the facilities" CssClass="form-control"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidatorSpectators04" runat="server" ControlToValidate="Spectators04TextBox" ErrorMessage="Spectators field is empty. Please input the amount of spectators" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                     </div>
                 </div>
@@ -132,7 +151,7 @@
     <!--.panel panel-primary-->
     <div>
         <asp:Button ID="SubmitButton" runat="server" Text="Summary" CssClass="btn btn-primary" OnClick="SubmitButton_Click" />
-        <asp:Button ID="ClearButton" runat="server" Text="Clear" CssClass="btn btn-warning" OnClick="ClearButton_Click" />
+        <asp:Button ID="ClearButton" runat="server" Text="Clear" CssClass="btn btn-warning" OnClick="ClearButton_Click" Enabled="true"/>
     </div>
     <!--button-->
 

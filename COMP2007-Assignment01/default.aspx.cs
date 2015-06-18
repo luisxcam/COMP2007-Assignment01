@@ -301,34 +301,36 @@ namespace COMP2007_Assignment01
         //Clear button
         protected void ClearButton_Click(object sender, EventArgs e)
         {
+            //Testing
+            System.Diagnostics.Debug.WriteLine(">>>>>>>>>>>Clear button Pressed>>>>>>>>>>>");
+
             //Delete all data
             //Game01
-            WinLose01RadioButtonList.SelectedValue = "Win";
+            WinLose01RadioButtonList.SelectedValue = null;
             PointsScored01TextBox.Text = "";
             PointsAllowed01TextBox.Text = "";
             Spectators01TextBox.Text = "";
 
             //Game02
-            WinLose02RadioButtonList.SelectedValue = "Win";
+            WinLose02RadioButtonList.SelectedValue = null;
             PointsScored02TextBox.Text = "";
             PointsAllowed02TextBox.Text = "";
             Spectators02TextBox.Text = "";
 
             //Game03
-            WinLose03RadioButtonList.SelectedValue = "Win";
+            WinLose03RadioButtonList.SelectedValue = null;
             PointsScored03TextBox.Text = "";
             PointsAllowed03TextBox.Text = "";
             Spectators03TextBox.Text = "";
 
             //Game04
-            WinLose04RadioButtonList.SelectedValue = "Win";
+            WinLose04RadioButtonList.SelectedValue = null;
             PointsScored04TextBox.Text = "";
             PointsAllowed04TextBox.Text = "";
             Spectators04TextBox.Text = "";
 
             //Remove the focus
             removeErrorFocus();
-
 
         }//Game
 
