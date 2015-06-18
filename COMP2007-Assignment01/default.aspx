@@ -4,10 +4,14 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!--Game calculator-->
-    <div class="panel panel-primary">
+    <div id="gameCalculator" class="panel panel-primary" runat="server">
+
+        <!--Panel Heading-->
         <div class="panel-heading">
             <h1 id="calculator-title" class="panel-title text-center">Game Calculator</h1>
         </div>
+
+        <!--Panel Content-->
         <div class="panel-body">
             <div class="row">
                 <!--GAME 01 - GAME 01 - GAME 01 - GAME 01 - GAME 01 - GAME 01 - GAME 01 - -->
@@ -128,59 +132,64 @@
     <!--.panel panel-primary-->
     <div>
         <asp:Button ID="SubmitButton" runat="server" Text="Submit" CssClass="btn btn-primary" OnClick="SubmitButton_Click" />
+        <asp:Button ID="ClearButton" runat="server" Text="Clear" CssClass="btn btn-warning" OnClick="ClearButton_Click" />
     </div>
+    <!--button-->
 
     <br />
 
     <!--Display results of the form-->
-    <div id="showResults" runat="server" class="">
+    <div id="showResults" runat="server" class="hidden">
         <div id="resultStatus" class="panel panel-success" runat="server">
+            <!-- Second option panel-danger-->
             <!-- Default panel contents -->
-            <h3 class="panel-heading">Results</h3>
-            
+            <div class="panel-heading">Results</div>
+
             <!--Error display -->
-            <asp:Label ID="errorList" runat="server" Text="" CssClass="hidden"></asp:Label>
+            <asp:Label ID="errorListTextBox" runat="server" Text="" CssClass="hidden"></asp:Label>
 
             <!-- Table -->
             <asp:Table ID="Table1" runat="server" CssClass="table">
                 <asp:TableHeaderRow>
                     <asp:TableHeaderCell>Games Won</asp:TableHeaderCell>
-                    <asp:TableCell ID="gamesWon">4</asp:TableCell>
+                    <asp:TableCell ID="gamesWonTextBox"></asp:TableCell>
                 </asp:TableHeaderRow>
                 <asp:TableHeaderRow>
                     <asp:TableHeaderCell>Games Lost</asp:TableHeaderCell>
-                    <asp:TableCell ID="gamesLost">0</asp:TableCell>
+                    <asp:TableCell ID="gamesLostTextBox"></asp:TableCell>
                 </asp:TableHeaderRow>
                 <asp:TableHeaderRow>
                     <asp:TableHeaderCell>Winning %</asp:TableHeaderCell>
-                    <asp:TableCell ID="winningPercentage">71%</asp:TableCell>
+                    <asp:TableCell ID="winningPercentageTextBox"></asp:TableCell>
                 </asp:TableHeaderRow>
                 <asp:TableHeaderRow>
                     <asp:TableHeaderCell>Total Points Scored</asp:TableHeaderCell>
-                    <asp:TableCell ID="totalPointsScored">124</asp:TableCell>
+                    <asp:TableCell ID="totalPointsScoredTextBox"></asp:TableCell>
                 </asp:TableHeaderRow>
                 <asp:TableHeaderRow>
                     <asp:TableHeaderCell>Total Points Allowed</asp:TableHeaderCell>
-                    <asp:TableCell ID="totalPointsAllowed">300</asp:TableCell>
+                    <asp:TableCell ID="totalPointsAllowedTextBox"></asp:TableCell>
                 </asp:TableHeaderRow>
                 <asp:TableHeaderRow>
                     <asp:TableHeaderCell>Point Differential</asp:TableHeaderCell>
-                    <asp:TableCell ID="pointDifferential">24</asp:TableCell>
+                    <asp:TableCell ID="pointDifferentialTextBox"></asp:TableCell>
                 </asp:TableHeaderRow>
                 <asp:TableHeaderRow>
                     <asp:TableHeaderCell>Total Spectators</asp:TableHeaderCell>
-                    <asp:TableCell ID="totalSpectators">1200</asp:TableCell>
+                    <asp:TableCell ID="totalSpectatorsTextBox"></asp:TableCell>
                 </asp:TableHeaderRow>
                 <asp:TableHeaderRow>
                     <asp:TableHeaderCell>Average Spectators</asp:TableHeaderCell>
-                    <asp:TableCell ID="averageSpectators">120</asp:TableCell>
+                    <asp:TableCell ID="averageSpectatorsTextBox"></asp:TableCell>
                 </asp:TableHeaderRow>
             </asp:Table>
 
         </div>
+        <!--panel panel-success-->
 
         <!--Button to go back-->
-        <asp:Button ID="BackButton" runat="server" Text="Back" CssClass="btn btn-success" />
+        <asp:Button ID="BackButton" runat="server" Text="Back" CssClass="btn btn-success" OnClick="BackButton_Click" />
     </div>
+    <!--showResults-->
 
 </asp:Content>

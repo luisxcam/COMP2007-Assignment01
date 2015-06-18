@@ -13,6 +13,15 @@ namespace COMP2007_Assignment01 {
     public partial class _default {
         
         /// <summary>
+        /// gameCalculator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl gameCalculator;
+        
+        /// <summary>
         /// Result01Label control.
         /// </summary>
         /// <remarks>
@@ -310,6 +319,15 @@ namespace COMP2007_Assignment01 {
         protected global::System.Web.UI.WebControls.Button SubmitButton;
         
         /// <summary>
+        /// ClearButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ClearButton;
+        
+        /// <summary>
         /// showResults control.
         /// </summary>
         /// <remarks>
@@ -328,13 +346,13 @@ namespace COMP2007_Assignment01 {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl resultStatus;
         
         /// <summary>
-        /// errorList control.
+        /// errorListTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label errorList;
+        protected global::System.Web.UI.WebControls.Label errorListTextBox;
         
         /// <summary>
         /// Table1 control.
@@ -346,76 +364,76 @@ namespace COMP2007_Assignment01 {
         protected global::System.Web.UI.WebControls.Table Table1;
         
         /// <summary>
-        /// gamesWon control.
+        /// gamesWonTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell gamesWon;
+        protected global::System.Web.UI.WebControls.TableCell gamesWonTextBox;
         
         /// <summary>
-        /// gamesLost control.
+        /// gamesLostTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell gamesLost;
+        protected global::System.Web.UI.WebControls.TableCell gamesLostTextBox;
         
         /// <summary>
-        /// winningPercentage control.
+        /// winningPercentageTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell winningPercentage;
+        protected global::System.Web.UI.WebControls.TableCell winningPercentageTextBox;
         
         /// <summary>
-        /// totalPointsScored control.
+        /// totalPointsScoredTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell totalPointsScored;
+        protected global::System.Web.UI.WebControls.TableCell totalPointsScoredTextBox;
         
         /// <summary>
-        /// totalPointsAllowed control.
+        /// totalPointsAllowedTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell totalPointsAllowed;
+        protected global::System.Web.UI.WebControls.TableCell totalPointsAllowedTextBox;
         
         /// <summary>
-        /// pointDifferential control.
+        /// pointDifferentialTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell pointDifferential;
+        protected global::System.Web.UI.WebControls.TableCell pointDifferentialTextBox;
         
         /// <summary>
-        /// totalSpectators control.
+        /// totalSpectatorsTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell totalSpectators;
+        protected global::System.Web.UI.WebControls.TableCell totalSpectatorsTextBox;
         
         /// <summary>
-        /// averageSpectators control.
+        /// averageSpectatorsTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell averageSpectators;
+        protected global::System.Web.UI.WebControls.TableCell averageSpectatorsTextBox;
         
         /// <summary>
         /// BackButton control.
