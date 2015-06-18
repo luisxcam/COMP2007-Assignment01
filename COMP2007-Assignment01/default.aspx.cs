@@ -10,7 +10,7 @@ namespace COMP2007_Assignment01
     public partial class _default : System.Web.UI.Page
     {
         //Global variables
-        const int AMOUNT_OF_GAMES = 1;
+        const int AMOUNT_OF_GAMES = 4;
 
         //---------------------------------------------------------------------------------
         protected void Page_Load(object sender, EventArgs e)
@@ -23,13 +23,19 @@ namespace COMP2007_Assignment01
         protected void SubmitButton_Click(object sender, EventArgs e)
         {
             //Testing purposes
-
+            Console.WriteLine("Submit Button Pressed");
 
             //Variable definition
             Game[] games = new Game[AMOUNT_OF_GAMES];
             int gameNumber = 0;
 
             games[gameNumber] = new Game(++gameNumber, WinLose01RadioButtonList.SelectedValue, PointsScored01TextBox.Text, PointsAllowed01TextBox.Text, Spectators01TextBox.Text);
+
+            games[gameNumber] = new Game(++gameNumber, WinLose02RadioButtonList.SelectedValue, PointsScored02TextBox.Text, PointsAllowed02TextBox.Text, Spectators02TextBox.Text);
+
+            games[gameNumber] = new Game(++gameNumber, WinLose03RadioButtonList.SelectedValue, PointsScored03TextBox.Text, PointsAllowed03TextBox.Text, Spectators03TextBox.Text);
+
+            games[gameNumber] = new Game(++gameNumber, WinLose04RadioButtonList.SelectedValue, PointsScored04TextBox.Text, PointsAllowed04TextBox.Text, Spectators04TextBox.Text);
 
             //Print to table
             PrintStatistics(games);
@@ -119,12 +125,12 @@ namespace COMP2007_Assignment01
                     gamesAreOk = false;
 
                     //Start getting all of the errors
-                    errorList += "Game[" + x.getGameNumber() + "] has the following errors:" + Environment.NewLine+errorsFound;
+                    errorList += "<b>Game[" + x.getGameNumber() + "] has the following errors:</b>" + "<br/>"+errorsFound;
                     
                 }
                 else
                 {
-                    errorList += "Game[" + x.getGameNumber() + "] is Ok";
+                    errorList += "<b>Game[" + x.getGameNumber() + "] is Ok</b>" + "<br/>";
                 }//if
 
                 //Clear the errors found for next one
@@ -167,7 +173,7 @@ namespace COMP2007_Assignment01
                 pointDifferential = totalPointsScored - totalPointsAllowed;
 
                 //Average spectators
-                averageSpectators = totalSpectators / AMOUNT_OF_GAMES;
+                averageSpectators = (float) totalSpectators / AMOUNT_OF_GAMES;
 
                 //Print to Table
                 gamesWonTextBox.Text = gamesWon.ToString();
@@ -271,7 +277,7 @@ namespace COMP2007_Assignment01
                 }
                 catch (FormatException)//Value is different than numerical
                 {
-                    Console.WriteLine("Non-numerical value entered");
+                    Console.WriteLine("Non-Numerical or Empty value entered");
                     returnValue = -1;
                 }
                 catch (OverflowException)//Value exceed the size of int
@@ -303,16 +309,16 @@ namespace COMP2007_Assignment01
                     switch (getPointsScored())
                     {
                         case -1:
-                            errorList += "Non-Numerical value entered on Points Scored" + Environment.NewLine;
+                            errorList += "Non-Numerical or Empty value entered on Points Scored" + "<br/>";
                             break;
                         case -2:
-                            errorList += "Numerical value exceeds that of a regular integer on Points Scored" + Environment.NewLine;
+                            errorList += "Numerical value exceeds that of a regular integer on Points Scored" + "<br/>";
                             break;
                         case -3:
-                            errorList += "Call a programmer..." + Environment.NewLine;
+                            errorList += "Call a programmer..." + "<br/>";
                             break;
                         default:
-                            errorList += "The value entered on Points Scored was less than zero" + Environment.NewLine;
+                            errorList += "The value entered on Points Scored was less than zero" + "<br/>";
                             break;
                     }//switch
                 }//if
@@ -324,16 +330,16 @@ namespace COMP2007_Assignment01
                     switch (getPointsAllowed())
                     {
                         case -1:
-                            errorList += "Non-Numerical value entered on Points Allowed" + Environment.NewLine;
+                            errorList += "Non-Numerical or Empty value entered on Points Allowed" + "<br/>";
                             break;
                         case -2:
-                            errorList += "Numerical value exceeds that of a regular integer on Points Allowed" + Environment.NewLine;
+                            errorList += "Numerical value exceeds that of a regular integer on Points Allowed" + "<br/>";
                             break;
                         case -3:
-                            errorList += "Call a programmer..." + Environment.NewLine;
+                            errorList += "Call a programmer..." + "<br/>";
                             break;
                         default:
-                            errorList += "The value entered on Points Allowed was less than zero" + Environment.NewLine;
+                            errorList += "The value entered on Points Allowed was less than zero" + "<br/>";
                             break;
                     }//switch
                 }//if
@@ -342,36 +348,44 @@ namespace COMP2007_Assignment01
                 switch (getSpectators())
                 {
                     case -1:
-                        errorList += "Non-Numerical value entered on Spectators" + Environment.NewLine;
+                        errorList += "Non-Numerical or Empty value entered on Spectators" + "<br/>";
                         break;
                     case -2:
-                        errorList += "Numerical value exceeds that of a regular integer on Spectators" + Environment.NewLine;
+                        errorList += "Numerical value exceeds that of a regular integer on Spectators" + "<br/>";
                         break;
                     case -3:
-                        errorList += "Call a programmer..." + Environment.NewLine;
+                        errorList += "Call a programmer..." + "<br/>";
                         break;
-                    default:
-                        errorList += "The value entered on Spectators was less than zero" + Environment.NewLine;
+                    case -4:
+                        errorList += "The value entered on Spectators was less than zero" + "<br/>";
                         break;
                 }//switch
 
                 //Check win and lose
                 if (pointsScoredAllowedOk)
                 {
-                    if (getWinLose())
+                    if (getPointsAllowed() != getPointsScored())
                     {
-                        if (getPointsAllowed() > getPointsScored())
+                        if (getWinLose())
                         {
-                            errorList += "Wrong selection on the radio buttons. The points allowed were greater than the scored" + Environment.NewLine;
-                        }
+                            if (getPointsAllowed() > getPointsScored())
+                            {
+                                errorList += "Wrong selection on the radio buttons. The points allowed were greater than the scored" + "<br/>";
+                            }//if
+                        }//if
+                        else
+                        {
+                            if (getPointsAllowed() < getPointsScored())
+                            {
+                                errorList += "Wrong selection on the radio buttons. The points scored were greater than the allowed" + "<br/>";
+                            }//if
+                        }//else
                     }//if
                     else
                     {
-                        if (getPointsAllowed() < getPointsScored())
-                        {
-                            errorList += "Wrong selection on the radio buttons. The points scored were greater than the allowed" + Environment.NewLine;
-                        }
-                    }
+                        //tell the user the score is the same
+                        errorList += "The amount of points scored is equal to that of the allowed. Cannot proceed until the values are fixed" + "<br/>";
+                    }//else
                 }//if
 
                 return errorList;
