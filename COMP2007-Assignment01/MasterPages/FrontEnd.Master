@@ -1,7 +1,9 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="FrontEnd.Master.cs" Inherits="COMP2007_Assignment01.MasterPages.Site1" %>
 
 <!DOCTYPE html>
-
+<!--Developer: Luis Acevedo-->
+<!--Project: Assignment01-->
+<!--Description: Game calculator-->
 <html lang="en">
 <head runat="server">
     <!--Meta-->
@@ -37,7 +39,7 @@
                 <!--Content-->
                 <div class="container-fluid body-content">
                     <section id="mainContent">
-                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
                     </section>
                     <!--#mainContent-->
                 </div><!--.container body-content-->

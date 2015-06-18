@@ -23,19 +23,32 @@ namespace COMP2007_Assignment01
         protected void SubmitButton_Click(object sender, EventArgs e)
         {
             //Testing purposes
-            Console.WriteLine("Submit Button Pressed");
+            System.Diagnostics.Debug.WriteLine("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
+            System.Diagnostics.Debug.WriteLine("Submit Button Pressed");
 
             //Variable definition
             Game[] games = new Game[AMOUNT_OF_GAMES];
             int gameNumber = 0;
 
+            //Grab all of the inputs
             games[gameNumber] = new Game(++gameNumber, WinLose01RadioButtonList.SelectedValue, PointsScored01TextBox.Text, PointsAllowed01TextBox.Text, Spectators01TextBox.Text);
-
             games[gameNumber] = new Game(++gameNumber, WinLose02RadioButtonList.SelectedValue, PointsScored02TextBox.Text, PointsAllowed02TextBox.Text, Spectators02TextBox.Text);
-
             games[gameNumber] = new Game(++gameNumber, WinLose03RadioButtonList.SelectedValue, PointsScored03TextBox.Text, PointsAllowed03TextBox.Text, Spectators03TextBox.Text);
-
             games[gameNumber] = new Game(++gameNumber, WinLose04RadioButtonList.SelectedValue, PointsScored04TextBox.Text, PointsAllowed04TextBox.Text, Spectators04TextBox.Text);
+
+
+            //Testing
+            for (int x = 0; x < AMOUNT_OF_GAMES; x++)
+            {
+                System.Diagnostics.Debug.WriteLine("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++GAME-"+x);
+                System.Diagnostics.Debug.WriteLine("Game[" + x + "].Game#=" + games[x].getGameNumber());
+                System.Diagnostics.Debug.WriteLine("Game[" + x + "].WinLose=" + games[x].getWinLose());
+                System.Diagnostics.Debug.WriteLine("Game[" + x + "].PointsScored=" + games[x].getPointsScored());
+                System.Diagnostics.Debug.WriteLine("Game[" + x + "].PointsAllowed=" + games[x].getPointsAllowed());
+                System.Diagnostics.Debug.WriteLine("Game[" + x + "].Spectators=" + games[x].getSpectators());
+                System.Diagnostics.Debug.WriteLine("Game[" + x + "].ErrorList=" + games[x].returnErrorList());
+            }
+
 
             //Print to table
             PrintStatistics(games);
@@ -46,76 +59,18 @@ namespace COMP2007_Assignment01
         }//SubmitButton_Click
 
         //---------------------------------------------------------------------------------
-        //Clear button
-        protected void ClearButton_Click(object sender, EventArgs e)
-        {
-            //Delete all data
-            //Game01
-            WinLose01RadioButtonList.SelectedValue = "Win";
-            PointsScored01TextBox.Text = "";
-            PointsAllowed01TextBox.Text = "";
-            Spectators01TextBox.Text = "";
-
-            //Game02
-            WinLose02RadioButtonList.SelectedValue = "Win";
-            PointsScored02TextBox.Text = "";
-            PointsAllowed02TextBox.Text = "";
-            Spectators02TextBox.Text = "";
-
-            //Game03
-            WinLose03RadioButtonList.SelectedValue = "Win";
-            PointsScored03TextBox.Text = "";
-            PointsAllowed03TextBox.Text = "";
-            Spectators03TextBox.Text = "";
-
-            //Game04
-            WinLose04RadioButtonList.SelectedValue = "Win";
-            PointsScored04TextBox.Text = "";
-            PointsAllowed04TextBox.Text = "";
-            Spectators04TextBox.Text = "";
-
-            //Remove the focus
-            removeErrorFocus();
-
-
-        }//Game
-
-        //Back button
-        protected void BackButton_Click(object sender, EventArgs e)
-        {
-            HideForm(false);
-        }
-
-        //---------------------------------------------------------------------------------
-        //Hides the form and shows the table
-        private void HideForm(bool hide)
-        {
-            if (hide)
-            {
-                gameCalculator.Attributes["class"] = "hidden";
-                SubmitButton.CssClass = "hidden";
-                ClearButton.CssClass = "hidden";
-                showResults.Attributes["class"] = "";
-            }
-            else
-            {
-                gameCalculator.Attributes["class"] = "panel panel-primary";
-                SubmitButton.CssClass = "btn btn-primary";
-                ClearButton.CssClass = "btn btn-warning";
-                showResults.Attributes["class"] = "hidden";
-            }
-        }//HideForm
-
-        //---------------------------------------------------------------------------------
         //Print values to boxes
         private void PrintStatistics(Game[] games)
         {
             //Local variables
-            String errorsFound, errorList = "";
+            String errorsFound = "", errorList = "";
             bool gamesAreOk = true;
             int gamesWon = 0, gamesLost = 0, totalPointsScored = 0, totalPointsAllowed = 0, totalSpectators = 0, pointDifferential = 0;
             float winningPercentage = 0, averageSpectators = 0;
 
+            //Testing
+            System.Diagnostics.Debug.WriteLine(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+            System.Diagnostics.Debug.WriteLine("Print Statistics Start");
 
             //Loop through each game
             foreach (Game x in games)
@@ -123,9 +78,15 @@ namespace COMP2007_Assignment01
                 //First check for errors
                 errorsFound = x.returnErrorList();
 
+                //Testing
+                System.Diagnostics.Debug.WriteLine("+-+-+-+Printing for game:" + x.getGameNumber());
+                System.Diagnostics.Debug.WriteLine("Errors Found:"+errorsFound);
+
                 //If errors found, don't print statistics
                 if (!errorsFound.Equals(""))
                 {
+                    //Testing
+                    System.Diagnostics.Debug.WriteLine("Didn't equals to empty");
                     //Games are not ok
                     gamesAreOk = false;
 
@@ -135,6 +96,9 @@ namespace COMP2007_Assignment01
                 }
                 else
                 {
+                    //Testing
+                    System.Diagnostics.Debug.WriteLine("Equals to empty");
+
                     errorList += "<b>Game[" + x.getGameNumber() + "] is Ok</b>" + "<br/>";
                 }//if
 
@@ -145,8 +109,14 @@ namespace COMP2007_Assignment01
             //if no errors were found, then proceed with the data print. If not, then proceed with the error printing
             if (gamesAreOk)
             {
+                //Testing
+                System.Diagnostics.Debug.WriteLine("<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>");
+                System.Diagnostics.Debug.WriteLine("GAME OK");
+
                 //Make the table a success table
                 resultStatus.Attributes["class"] = "panel panel-success";
+                Table1.CssClass = "table";
+                errorListTextBox.CssClass = "hidden";
 
                 //Loop through each game and gather the data
                 foreach (Game x in games)
@@ -195,6 +165,10 @@ namespace COMP2007_Assignment01
             }
             else
             {
+                //Testing
+                System.Diagnostics.Debug.WriteLine("<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>");
+                System.Diagnostics.Debug.WriteLine("game NOT ok");
+                System.Diagnostics.Debug.WriteLine("This are the errors: "+errorList);
 
                 //Reset focus
                 removeErrorFocus();
@@ -324,7 +298,71 @@ namespace COMP2007_Assignment01
         }
 
         //---------------------------------------------------------------------------------
-        private void removeErrorFocus() { 
+        //Clear button
+        protected void ClearButton_Click(object sender, EventArgs e)
+        {
+            //Delete all data
+            //Game01
+            WinLose01RadioButtonList.SelectedValue = "Win";
+            PointsScored01TextBox.Text = "";
+            PointsAllowed01TextBox.Text = "";
+            Spectators01TextBox.Text = "";
+
+            //Game02
+            WinLose02RadioButtonList.SelectedValue = "Win";
+            PointsScored02TextBox.Text = "";
+            PointsAllowed02TextBox.Text = "";
+            Spectators02TextBox.Text = "";
+
+            //Game03
+            WinLose03RadioButtonList.SelectedValue = "Win";
+            PointsScored03TextBox.Text = "";
+            PointsAllowed03TextBox.Text = "";
+            Spectators03TextBox.Text = "";
+
+            //Game04
+            WinLose04RadioButtonList.SelectedValue = "Win";
+            PointsScored04TextBox.Text = "";
+            PointsAllowed04TextBox.Text = "";
+            Spectators04TextBox.Text = "";
+
+            //Remove the focus
+            removeErrorFocus();
+
+
+        }//Game
+
+        //Back button
+        protected void BackButton_Click(object sender, EventArgs e)
+        {
+            HideForm(false);
+        }
+
+        //---------------------------------------------------------------------------------
+        //Hides the form and shows the table
+        private void HideForm(bool hide)
+        {
+            if (hide)
+            {
+                gameCalculator.Attributes["class"] = "hidden";
+                SubmitButton.CssClass = "hidden";
+                ClearButton.CssClass = "hidden";
+                showResults.Attributes["class"] = "";
+            }
+            else
+            {
+                gameCalculator.Attributes["class"] = "panel panel-primary";
+                SubmitButton.CssClass = "btn btn-primary";
+                ClearButton.CssClass = "btn btn-warning";
+                showResults.Attributes["class"] = "hidden";
+            }
+        }//HideForm
+
+        
+
+        //---------------------------------------------------------------------------------
+        private void removeErrorFocus()
+        {
             //Game01
             WinLose01RadioButtonList.CssClass = "";
             PointsScored01TextBox.CssClass = "form-control";
@@ -425,23 +463,23 @@ namespace COMP2007_Assignment01
                     //Check if the value is negative
                     if (returnValue < 0)
                     {
-                        Console.WriteLine("The value is less than zero " + input.ToString());
+                        System.Diagnostics.Debug.WriteLine("The value is less than zero");
                         returnValue = -4;
                     }//if
                 }
                 catch (FormatException)//Value is different than numerical
                 {
-                    Console.WriteLine("Non-Numerical or Empty value entered");
+                    System.Diagnostics.Debug.WriteLine("Non-Numerical or Empty value entered");
                     returnValue = -1;
                 }
                 catch (OverflowException)//Value exceed the size of int
                 {
-                    Console.WriteLine("Numerical value is greater than the limit");
+                    System.Diagnostics.Debug.WriteLine("Numerical value is greater than the limit");
                     returnValue = -2;
                 }
                 catch (Exception)//Wow this is crazy. I dunno D:
                 {
-                    Console.WriteLine("Exception detected. Error not identified");
+                    System.Diagnostics.Debug.WriteLine("Exception detected. Error not identified");
                     returnValue = -3;
                 }
 

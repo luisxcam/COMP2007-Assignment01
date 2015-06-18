@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <!--Game calculator-->
     <div id="gameCalculator" class="panel panel-primary" runat="server">
 
@@ -23,7 +23,7 @@
                         <div>
                             <asp:Label ID="Result01Label" runat="server" Text="Results:"></asp:Label>
                             <asp:RadioButtonList ID="WinLose01RadioButtonList" runat="server">
-                                <asp:ListItem Selected="True" Text="Win"></asp:ListItem>
+                                <asp:ListItem Text="Win"></asp:ListItem>
                                 <asp:ListItem Text="Lose"></asp:ListItem>
                             </asp:RadioButtonList>
                         </div>
@@ -50,7 +50,7 @@
                         <div>
                             <asp:Label ID="Result02Label" runat="server" Text="Results:"></asp:Label>
                             <asp:RadioButtonList ID="WinLose02RadioButtonList" runat="server">
-                                <asp:ListItem Selected="True" Text="Win"></asp:ListItem>
+                                <asp:ListItem Text="Win"></asp:ListItem>
                                 <asp:ListItem Text="Lose"></asp:ListItem>
                             </asp:RadioButtonList>
                         </div>
@@ -79,7 +79,7 @@
                         <div>
                             <asp:Label ID="Result03Label" runat="server" Text="Results:"></asp:Label>
                             <asp:RadioButtonList ID="WinLose03RadioButtonList" runat="server">
-                                <asp:ListItem Selected="True" Text="Win"></asp:ListItem>
+                                <asp:ListItem Text="Win"></asp:ListItem>
                                 <asp:ListItem Text="Lose"></asp:ListItem>
                             </asp:RadioButtonList>
                         </div>
@@ -106,7 +106,7 @@
                         <div>
                             <asp:Label ID="Result04Label" runat="server" Text="Results:"></asp:Label>
                             <asp:RadioButtonList ID="WinLose04RadioButtonList" runat="server">
-                                <asp:ListItem Selected="True" Text="Win"></asp:ListItem>
+                                <asp:ListItem Text="Win"></asp:ListItem>
                                 <asp:ListItem Text="Lose"></asp:ListItem>
                             </asp:RadioButtonList>
                         </div>
