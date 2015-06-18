@@ -6,3 +6,11 @@
 #calculator-title {
     font-size: 2em;
 }
+
+.focusedInput {
+    border-color: rgba(141, 0, 0, 0.8);
+    outline: 0;
+    outline: thin dotted \9;
+    -moz-box-shadow: 0px 0px 8px rgba(120, 0, 0, 0.6);
+    box-shadow: 0px 0px 8px rgba(120, 0, 0, 0.6) !important;
+}

@@ -73,7 +73,10 @@ namespace COMP2007_Assignment01
             PointsScored04TextBox.Text = "";
             PointsAllowed04TextBox.Text = "";
             Spectators04TextBox.Text = "";
-            
+
+            //Remove the focus
+            removeErrorFocus();
+
 
         }//Game
 
@@ -115,18 +118,20 @@ namespace COMP2007_Assignment01
 
 
             //Loop through each game
-            foreach(Game x in games){
+            foreach (Game x in games)
+            {
                 //First check for errors
                 errorsFound = x.returnErrorList();
 
                 //If errors found, don't print statistics
-                if (!errorsFound.Equals("")) {
+                if (!errorsFound.Equals(""))
+                {
                     //Games are not ok
                     gamesAreOk = false;
 
                     //Start getting all of the errors
-                    errorList += "<b>Game[" + x.getGameNumber() + "] has the following errors:</b>" + "<br/>"+errorsFound;
-                    
+                    errorList += "<b>Game[" + x.getGameNumber() + "] has the following errors:</b>" + "<br/>" + errorsFound;
+
                 }
                 else
                 {
@@ -138,12 +143,14 @@ namespace COMP2007_Assignment01
             }//foreach
 
             //if no errors were found, then proceed with the data print. If not, then proceed with the error printing
-            if (gamesAreOk) { 
+            if (gamesAreOk)
+            {
                 //Make the table a success table
                 resultStatus.Attributes["class"] = "panel panel-success";
-                
-                 //Loop through each game and gather the data
-                foreach (Game x in games) { 
+
+                //Loop through each game and gather the data
+                foreach (Game x in games)
+                {
                     //Acumulate the wins and loses
                     if (x.getWinLose())
                     {
@@ -173,7 +180,7 @@ namespace COMP2007_Assignment01
                 pointDifferential = totalPointsScored - totalPointsAllowed;
 
                 //Average spectators
-                averageSpectators = (float) totalSpectators / AMOUNT_OF_GAMES;
+                averageSpectators = (float)totalSpectators / AMOUNT_OF_GAMES;
 
                 //Print to Table
                 gamesWonTextBox.Text = gamesWon.ToString();
@@ -185,7 +192,13 @@ namespace COMP2007_Assignment01
                 totalSpectatorsTextBox.Text = totalSpectators.ToString();
                 averageSpectatorsTextBox.Text = averageSpectators.ToString();
 
-            } else {
+            }
+            else
+            {
+
+                //Reset focus
+                removeErrorFocus();
+
                 //Panel for bad values
                 resultStatus.Attributes["class"] = "panel panel-danger";
                 Table1.CssClass = "hidden";
@@ -193,7 +206,148 @@ namespace COMP2007_Assignment01
 
                 //Print the errors
                 errorListTextBox.Text = errorList;
+
+                //focus the errors
+                //GAME 01 - GAME 01 - GAME 01 - GAME 01 - GAME 01 - GAME 01 - GAME 01 - GAME 01
+                //Points Scored 01
+                if (games[0].getPointsScored() < 0 || (games[0].getPointsScored() == games[0].getPointsAllowed()))
+                {
+                    PointsScored01TextBox.CssClass = "form-control focusedInput";
+                }
+
+                //Points Allowed 01
+                if (games[0].getPointsAllowed() < 0 || (games[0].getPointsScored() == games[0].getPointsAllowed()))
+                {
+                    PointsAllowed01TextBox.CssClass = "form-control focusedInput";
+                }
+
+                //Spectators 01
+                if (games[0].getSpectators() < 0)
+                {
+                    Spectators01TextBox.CssClass = "form-control focusedInput";
+                }
+
+                //Radiobuttons 01
+                if ((games[0].getPointsScored() > games[0].getPointsAllowed() && !games[0].getWinLose())
+                    ||
+                    (games[0].getPointsScored() < games[0].getPointsAllowed() && games[0].getWinLose())
+                    )
+                {
+                    WinLose01RadioButtonList.CssClass = "focusedInput";
+                }
+
+                //GAME 02 - GAME 02 - GAME 02 - GAME 02 - GAME 02 - GAME 02 - GAME 02 - GAME 02
+                //Points Scored 02
+                if (games[1].getPointsScored() < 0 || (games[1].getPointsScored() == games[1].getPointsAllowed()))
+                {
+                    PointsScored02TextBox.CssClass = "form-control focusedInput";
+                }
+
+                //Points Allowed 02
+                if (games[1].getPointsAllowed() < 0 || (games[1].getPointsScored() == games[1].getPointsAllowed()))
+                {
+                    PointsAllowed02TextBox.CssClass = "form-control focusedInput";
+                }
+
+                //Spectators 02
+                if (games[1].getSpectators() < 0)
+                {
+                    Spectators02TextBox.CssClass = "form-control focusedInput";
+                }
+
+                //Radiobuttons 02
+                if ((games[1].getPointsScored() > games[1].getPointsAllowed() && !games[1].getWinLose())
+                    ||
+                    (games[1].getPointsScored() < games[1].getPointsAllowed() && games[1].getWinLose())
+                    )
+                {
+                    WinLose02RadioButtonList.CssClass = "focusedInput";
+                }
+
+                //GAME 03 - GAME 03 - GAME 03 - GAME 03 - GAME 03 - GAME 03 - GAME 03 - GAME 03
+                //Points Scored 03
+                if (games[2].getPointsScored() < 0 || (games[2].getPointsScored() == games[2].getPointsAllowed()))
+                {
+                    PointsScored03TextBox.CssClass = "form-control focusedInput";
+                }
+
+                //Points Allowed 03
+                if (games[2].getPointsAllowed() < 0 || (games[2].getPointsScored() == games[2].getPointsAllowed()))
+                {
+                    PointsAllowed03TextBox.CssClass = "form-control focusedInput";
+                }
+
+                //Spectators 03
+                if (games[2].getSpectators() < 0)
+                {
+                    Spectators03TextBox.CssClass = "form-control focusedInput";
+                }
+
+                //Radiobuttons 03
+                if ((games[2].getPointsScored() > games[2].getPointsAllowed() && !games[2].getWinLose())
+                    ||
+                    (games[2].getPointsScored() < games[2].getPointsAllowed() && games[2].getWinLose())
+                    )
+                {
+                    WinLose03RadioButtonList.CssClass = "focusedInput";
+                }
+
+                //GAME 04 - GAME 04 - GAME 04 - GAME 04 - GAME 04 - GAME 04 - GAME 04 - GAME 04
+                //Points Scored 04
+                if (games[3].getPointsScored() < 0 || (games[3].getPointsScored() == games[3].getPointsAllowed()))
+                {
+                    PointsScored04TextBox.CssClass = "form-control focusedInput";
+                }
+
+                //Points Allowed 04
+                if (games[3].getPointsAllowed() < 0 || (games[3].getPointsScored() == games[3].getPointsAllowed()))
+                {
+                    PointsAllowed04TextBox.CssClass = "form-control focusedInput";
+                }
+
+                //Spectators 04
+                if (games[3].getSpectators() < 0)
+                {
+                    Spectators04TextBox.CssClass = "form-control focusedInput";
+                }
+
+                //Radiobuttons 04
+                if ((games[3].getPointsScored() > games[3].getPointsAllowed() && !games[3].getWinLose())
+                    ||
+                    (games[3].getPointsScored() < games[3].getPointsAllowed() && games[3].getWinLose())
+                    )
+                {
+                    WinLose04RadioButtonList.CssClass = "focusedInput";
+                }
+
             }//if
+        }
+
+        //---------------------------------------------------------------------------------
+        private void removeErrorFocus() { 
+            //Game01
+            WinLose01RadioButtonList.CssClass = "";
+            PointsScored01TextBox.CssClass = "form-control";
+            PointsAllowed01TextBox.CssClass = "form-control";
+            Spectators01TextBox.CssClass = "form-control";
+
+            //Game02
+            WinLose02RadioButtonList.CssClass = "";
+            PointsScored02TextBox.CssClass = "form-control";
+            PointsAllowed02TextBox.CssClass = "form-control";
+            Spectators02TextBox.CssClass = "form-control";
+
+            //Game03
+            WinLose03RadioButtonList.CssClass = "";
+            PointsScored03TextBox.CssClass = "form-control";
+            PointsAllowed03TextBox.CssClass = "form-control";
+            Spectators03TextBox.CssClass = "form-control";
+
+            //Game04
+            WinLose04RadioButtonList.CssClass = "";
+            PointsScored04TextBox.CssClass = "form-control";
+            PointsAllowed04TextBox.CssClass = "form-control";
+            Spectators04TextBox.CssClass = "form-control";
         }
 
         //---------------------------------------------------------------------------------
@@ -271,7 +425,7 @@ namespace COMP2007_Assignment01
                     //Check if the value is negative
                     if (returnValue < 0)
                     {
-                        Console.WriteLine("The value is less than zero "+input.ToString());
+                        Console.WriteLine("The value is less than zero " + input.ToString());
                         returnValue = -4;
                     }//if
                 }

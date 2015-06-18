@@ -131,7 +131,7 @@
     </div>
     <!--.panel panel-primary-->
     <div>
-        <asp:Button ID="SubmitButton" runat="server" Text="Submit" CssClass="btn btn-primary" OnClick="SubmitButton_Click" />
+        <asp:Button ID="SubmitButton" runat="server" Text="Summary" CssClass="btn btn-primary" OnClick="SubmitButton_Click" />
         <asp:Button ID="ClearButton" runat="server" Text="Clear" CssClass="btn btn-warning" OnClick="ClearButton_Click" />
     </div>
     <!--button-->
