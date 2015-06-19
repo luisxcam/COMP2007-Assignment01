@@ -76,6 +76,15 @@ namespace COMP2007_Assignment01 {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorPointsScored01;
         
         /// <summary>
+        /// CustomValidatorEqualScores01 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidatorEqualScores01;
+        
+        /// <summary>
         /// PointsAllowed01Label control.
         /// </summary>
         /// <remarks>
@@ -101,15 +110,6 @@ namespace COMP2007_Assignment01 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorPointsAllowed01;
-        
-        /// <summary>
-        /// CompareValidatorGame01 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator CompareValidatorGame01;
         
         /// <summary>
         /// Spectators01Label control.
