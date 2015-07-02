@@ -30,9 +30,9 @@
                         </div>
                         <div>
                             <asp:Label ID="PointsScored01Label" runat="server" Text="Points Scored:"></asp:Label>
-                            <asp:TextBox ID="PointsScored01TextBox" runat="server" placeholder="Score of your team" CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="PointsScored01TextBox" runat="server" placeholder="Score of your team" CssClass="form-control" ClientIDMode="Static"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidatorPointsScored01" runat="server" ControlToValidate="PointsScored01TextBox" ErrorMessage="Scored Points field is empty. Please input the score" ForeColor="Red"></asp:RequiredFieldValidator>
-                            <asp:CustomValidator ID="CustomValidatorEqualScores01" runat="server" ErrorMessage="Points Scored and Points Allowed are equal. Please modify change one of the values" Display="Dynamic" ClientValidationFunction="validateScoredAllowed"></asp:CustomValidator>
+                            <asp:CustomValidator ID="CustomValidatorEqualScores01" runat="server" ErrorMessage="Points Scored and Points Allowed are equal. Please modify change one of the values" Display="Dynamic" ClientValidationFunction="validateScoredAllowed" ControlToValidate="PointsScored01TextBox" ClientIDMode="Static"></asp:CustomValidator>
                         </div>
                         <div>
                             <asp:Label ID="PointsAllowed01Label" runat="server" Text="Points Allowed:"></asp:Label>
